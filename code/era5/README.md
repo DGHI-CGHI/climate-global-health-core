@@ -17,7 +17,7 @@ This tool inventories the **NCAR public ERA5** archive on AWS S3, downloads mont
 # 1) Install R packages (see below).
 # 2) Configure REGIONS and WANT inside the script (optional; sane defaults exist).
 # 3) Run for a Year–Month, provide a single root directory:
-Rscript era5_download_and_subset.R 2019 1 --out=/path/to/run_root
+Rscript era5_download.R 2019 1 --out=/path/to/run_root
 ```
 
 The script creates and uses:
@@ -68,7 +68,7 @@ install.packages(c("xml2","curl","data.table","ncdf4","future","future.apply","d
 
 ## Configuration
 
-Open `era5_download_and_subset.R` and adjust:
+Open `era5_download.R` and adjust:
 
 * `REGIONS`: named bounding boxes (lon/lat degrees)
 * `WANT`: list of variables by canonical names (e.g., `"2m_temperature"`, `"surface_solar_radiation_downwards"`)
@@ -80,9 +80,9 @@ Open `era5_download_and_subset.R` and adjust:
 ## CLI
 
 ```bash
-Rscript era5_download_and_subset.R <year> <month> --out=/path/to/run_root
+Rscript era5_download.R <year> <month> --out=/path/to/run_root
 # Windows example:
-Rscript .\era5_download_and_subset.R 2020 12 --out="D:\data\era5"
+Rscript .\era5_download.R 2020 12 --out="D:\data\era5"
 ```
 
 **Notes**
