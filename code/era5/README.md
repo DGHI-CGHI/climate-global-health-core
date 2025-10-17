@@ -1,5 +1,8 @@
 # ERA5 Public S3 → Parallel Download → Regional NetCDF Subsetter
 
+This script lets you grab hourly weather data from a public archive and save just the parts you care about. You choose a month and a few map regions (like Southeast U.S. or Africa). The script downloads the needed files, then cuts them down to your regions so they’re smaller and easier to use. For some variables that are stored as “running totals,” it also converts them into hourly amounts so they’re ready for charts, maps, or analysis.
+
+## Details
 This tool inventories the **NCAR public ERA5** archive on AWS S3, downloads monthly NetCDF files in **parallel**, and writes per-region **subset NetCDFs**. Accumulated forecast variables (e.g., SSRD, RO) are converted to **hourly rates**.
 
 * Source bucket: `s3://nsf-ncar-era5` (anonymous; no requester-pays)
