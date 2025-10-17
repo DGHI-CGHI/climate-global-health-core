@@ -98,8 +98,3 @@ Rscript .\era5_download_and_subset.R 2020 12 --out="D:\data\era5"
 * **Too many workers**: cap `DOWNLOAD_WORKERS` / `SUBSET_WORKERS` to avoid oversubscription.
 * **Variable not found**: share the filename; the resolver can be extended with an extra alias.
 
----
-
-## License
-
-MIT (add a LICENSE file if desired).
